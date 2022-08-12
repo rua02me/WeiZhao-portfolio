@@ -14,7 +14,7 @@ export default function Intro() {
     <div className='intro' id='intro'>
       <div className='left'>
       <Canvas className="canvas">
-        <OrbitControls enableZoom={false} />
+        <OrbitControls enableZoom={true} autoRotate={true}/>
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} />
         <Suspense fallback={null}>
