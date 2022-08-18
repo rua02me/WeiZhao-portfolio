@@ -11,6 +11,8 @@ export default function Model(props) {
     actions.dance.play();
   })
 
+
+
   return (
     <group ref={group} {...props} dispose={null}>
       <group name="Scene">

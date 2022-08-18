@@ -15,10 +15,11 @@ In the project directory, you can run:
 ## Todo
 
 - update website styles
-- update the 3D model
-- add interactive moving feature to the model
+- update the 3D model (could be better..)
+- \*\*\*add interactive moving feature to the model
 - update the web content
 
 ## Update records
 
 - 0811: upload it to github
+- 0818: upload the original model with animation
