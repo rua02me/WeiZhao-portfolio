@@ -22,7 +22,7 @@ export default function Intro() {
         <OrbitControls enableZoom={true} autoRotate={true}/>
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} />
-        <group position={[0,-2.5,0]} scale={[0.65,0.65,0.65]}>
+        <group position={[0,-3,0]} scale={[0.65,0.65,0.65]}>
         <Suspense fallback={null}>
           <Model />
         </Suspense>
