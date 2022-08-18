@@ -1,12 +1,17 @@
 import './intro.scss'
-import { Canvas } from '@react-three/fiber';
-import Model from "./Kuromi"
+import * as THREE from "three"
+import { Canvas, useFrame} from '@react-three/fiber';
+import Model from "./Guy.js"
 import { Suspense } from 'react'
 import { OrbitControls } from "@react-three/drei";
-// import {init} from 'ityped'
-// import { useEffect, useRef } from 'react';
 import Typewriter from 'typewriter-effect';
 
+function Rig() {
+  return useFrame((state) => {
+    state.camera.position.x = THREE.MathUtils.lerp(state.camera.position.x, 1 + state.mouse.x / 4, 0.075)
+    state.camera.position.y = THREE.MathUtils.lerp(state.camera.position.y, 1.5 + state.mouse.y / 4, 0.075)
+  })
+}
 
 export default function Intro() {
 
@@ -17,9 +22,12 @@ export default function Intro() {
         <OrbitControls enableZoom={true} autoRotate={true}/>
         <ambientLight intensity={0.5} />
         <directionalLight position={[-2, 5, 2]} />
+        <group position={[0,-2.5,0]} scale={[0.65,0.65,0.65]}>
         <Suspense fallback={null}>
           <Model />
         </Suspense>
+        </group>
+        <Rig />
       </Canvas>
       </div>
       <div className='right'>
