@@ -6,7 +6,7 @@ This project tries to deploy a 3D model made from Blender into a porfolio websit
 
 ![Demo](./public/homepage.jpeg)
 
-website: https://scintillating-khapse-48e20c.netlify.app
+website:  https://scintillating-khapse-48e20c.netlify.app
 
 In the project directory, you can run:
 
